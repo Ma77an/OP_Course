@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/matan/Desktop/CS - Year 2/OP/Matala #1/main.c
+stdio.h
+-
+fcntl.h
+-
+unistd.h
+-
+
