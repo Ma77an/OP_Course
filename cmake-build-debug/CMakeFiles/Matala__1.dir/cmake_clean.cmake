@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Matala__1.dir/main.c.o"
+  "CMakeFiles/Matala__1.dir/comp.c.o"
   "Matala__1"
   "Matala__1.pdb"
 )

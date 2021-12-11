@@ -8,7 +8,6 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-
     //open the files
     int a = open(argv[1], O_RDONLY);
     int b = open(argv[2], O_RDONLY);

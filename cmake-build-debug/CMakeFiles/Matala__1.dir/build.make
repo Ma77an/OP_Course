@@ -66,27 +66,27 @@ include CMakeFiles/Matala__1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Matala__1.dir/flags.make
 
-CMakeFiles/Matala__1.dir/main.c.o: CMakeFiles/Matala__1.dir/flags.make
-CMakeFiles/Matala__1.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/matan/Desktop/CS - Year 2/OP/Matala #1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Matala__1.dir/main.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Matala__1.dir/main.c.o -c "/Users/matan/Desktop/CS - Year 2/OP/Matala #1/main.c"
+CMakeFiles/Matala__1.dir/comp.c.o: CMakeFiles/Matala__1.dir/flags.make
+CMakeFiles/Matala__1.dir/comp.c.o: ../comp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/matan/Desktop/CS - Year 2/OP/Matala #1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Matala__1.dir/comp.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Matala__1.dir/comp.c.o -c "/Users/matan/Desktop/CS - Year 2/OP/Matala #1/comp.c"
 
-CMakeFiles/Matala__1.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Matala__1.dir/main.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/matan/Desktop/CS - Year 2/OP/Matala #1/main.c" > CMakeFiles/Matala__1.dir/main.c.i
+CMakeFiles/Matala__1.dir/comp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Matala__1.dir/comp.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/matan/Desktop/CS - Year 2/OP/Matala #1/comp.c" > CMakeFiles/Matala__1.dir/comp.c.i
 
-CMakeFiles/Matala__1.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Matala__1.dir/main.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/matan/Desktop/CS - Year 2/OP/Matala #1/main.c" -o CMakeFiles/Matala__1.dir/main.c.s
+CMakeFiles/Matala__1.dir/comp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Matala__1.dir/comp.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/matan/Desktop/CS - Year 2/OP/Matala #1/comp.c" -o CMakeFiles/Matala__1.dir/comp.c.s
 
 # Object files for target Matala__1
 Matala__1_OBJECTS = \
-"CMakeFiles/Matala__1.dir/main.c.o"
+"CMakeFiles/Matala__1.dir/comp.c.o"
 
 # External object files for target Matala__1
 Matala__1_EXTERNAL_OBJECTS =
 
-Matala__1: CMakeFiles/Matala__1.dir/main.c.o
+Matala__1: CMakeFiles/Matala__1.dir/comp.c.o
 Matala__1: CMakeFiles/Matala__1.dir/build.make
 Matala__1: CMakeFiles/Matala__1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/matan/Desktop/CS - Year 2/OP/Matala #1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable Matala__1"

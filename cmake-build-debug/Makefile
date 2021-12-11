@@ -129,29 +129,29 @@ Matala__1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Matala__1.dir/build.make CMakeFiles/Matala__1.dir/build
 .PHONY : Matala__1/fast
 
-main.o: main.c.o
-.PHONY : main.o
+comp.o: comp.c.o
+.PHONY : comp.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Matala__1.dir/build.make CMakeFiles/Matala__1.dir/main.c.o
-.PHONY : main.c.o
+comp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Matala__1.dir/build.make CMakeFiles/Matala__1.dir/comp.c.o
+.PHONY : comp.c.o
 
-main.i: main.c.i
-.PHONY : main.i
+comp.i: comp.c.i
+.PHONY : comp.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Matala__1.dir/build.make CMakeFiles/Matala__1.dir/main.c.i
-.PHONY : main.c.i
+comp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Matala__1.dir/build.make CMakeFiles/Matala__1.dir/comp.c.i
+.PHONY : comp.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+comp.s: comp.c.s
+.PHONY : comp.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Matala__1.dir/build.make CMakeFiles/Matala__1.dir/main.c.s
-.PHONY : main.c.s
+comp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Matala__1.dir/build.make CMakeFiles/Matala__1.dir/comp.c.s
+.PHONY : comp.c.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Matala__1"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... comp.o"
+	@echo "... comp.i"
+	@echo "... comp.s"
 .PHONY : help
 
 

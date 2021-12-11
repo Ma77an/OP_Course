@@ -78,7 +78,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/matan/Desktop/CS - Year 2/OP/Matala #1/main.c">
+		<Unit filename="/Users/matan/Desktop/CS - Year 2/OP/Matala #1/comp.c">
 			<Option target="Matala__1"/>
 		</Unit>
 		<Unit filename="/Users/matan/Desktop/CS - Year 2/OP/Matala #1/CMakeLists.txt">

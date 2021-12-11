@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/matan/Desktop/CS - Year 2/OP/Matala #1/main.c" "/Users/matan/Desktop/CS - Year 2/OP/Matala #1/cmake-build-debug/CMakeFiles/Matala__1.dir/main.c.o"
+  "/Users/matan/Desktop/CS - Year 2/OP/Matala #1/comp.c" "/Users/matan/Desktop/CS - Year 2/OP/Matala #1/cmake-build-debug/CMakeFiles/Matala__1.dir/comp.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
