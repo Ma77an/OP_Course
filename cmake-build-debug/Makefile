@@ -153,6 +153,30 @@ comp.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Matala__1.dir/build.make CMakeFiles/Matala__1.dir/comp.c.s
 .PHONY : comp.c.s
 
+ex1.o: ex1.c.o
+.PHONY : ex1.o
+
+# target to build an object file
+ex1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Matala__1.dir/build.make CMakeFiles/Matala__1.dir/ex1.c.o
+.PHONY : ex1.c.o
+
+ex1.i: ex1.c.i
+.PHONY : ex1.i
+
+# target to preprocess a source file
+ex1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Matala__1.dir/build.make CMakeFiles/Matala__1.dir/ex1.c.i
+.PHONY : ex1.c.i
+
+ex1.s: ex1.c.s
+.PHONY : ex1.s
+
+# target to generate assembly for a file
+ex1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Matala__1.dir/build.make CMakeFiles/Matala__1.dir/ex1.c.s
+.PHONY : ex1.c.s
+
 exe1.o: exe1.c.o
 .PHONY : exe1.o
 
@@ -189,6 +213,9 @@ help:
 	@echo "... comp.o"
 	@echo "... comp.i"
 	@echo "... comp.s"
+	@echo "... ex1.o"
+	@echo "... ex1.i"
+	@echo "... ex1.s"
 	@echo "... exe1.o"
 	@echo "... exe1.i"
 	@echo "... exe1.s"
