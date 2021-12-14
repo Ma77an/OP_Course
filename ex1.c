@@ -7,15 +7,11 @@
 
 int main(int argc, char * argv[]) {
 
-
-//	Config File Inputted Check:
     if(argc != 2) {
         write(2, "Config file not inputted\n", 25);
         exit(-1);
     }
 
-
-//	Variables:
     int i, j, status = 11, bytesRead;
     char tav;
     char* config[3];
@@ -71,13 +67,9 @@ int main(int argc, char * argv[]) {
 //	Son:
     if(pid == 0) {
         perror("Error 2");
-//		// Change STDOUT to dirList.txt
         close(1);
-        dup(fdDirList);	// stdout became dirList.txt
-
-        // linux command CLOSE all files we are using WATCH OUT(need to re-open again dirList.txt)
-        // fdDirList of parent will point to DIFFERENT component!!!!!
-        execvp("ls", commandArgv); // ls is printing now to dirList.
+        dup(fdDirList);
+        execvp("ls", commandArgv);
 //		execvp failed:
         write(2, "exec failed\n", 12);
         exit(-1);
@@ -92,21 +84,16 @@ int main(int argc, char * argv[]) {
             exit(-1);
         }
     }
-
-    // Opening dirList.txt file again because SON CLOSE HIM!!!
     fdDirList = open("dirList.txt", (O_RDONLY));
     perror("Error 4");
     int succeedRead = -1;
     int usersCount = 0;
-    // ls prints '\n' at the end - so the last byte will be '\n'.
     while(succeedRead != 0) {
         succeedRead = read(fdDirList, &tav, 1);
-        if(succeedRead == 0) break;	// to make sure he won't count last place twice!!! because tav value stays '\n'
-        if(tav == '\n') usersCount++;           // counting amount of users
+        if(succeedRead == 0) break;
+        if(tav == '\n') usersCount++;
     }
 
-
-//	Allocation For Names:
     char** usersNames = (char**) malloc( usersCount*sizeof(char) );
     for(i = 0; i < usersCount; i++) {
         usersNames[i] = (char*) malloc( 50*sizeof(char) );
@@ -114,7 +101,6 @@ int main(int argc, char * argv[]) {
 
     perror("Error 5");
     lseek(fdDirList, 0, SEEK_SET);
-//	Read Names to Names Array:
     for(i = 0; i < usersCount; i++) {
         j = 0;
         bytesRead = read(fdDirList, &tav, 1);
@@ -156,20 +142,10 @@ int main(int argc, char * argv[]) {
     int fdUserOut;	// each student override content
 //לעבור על זה פהההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההה
     perror("Error 7");
-//    char** compArgv = (char**) malloc( 3 * sizeof(char*) );
-//    compArgv[0] = (char*) malloc( ( strlen("./comp.out") + 1 ) * sizeof(char) );
-//    strcpy(compArgv[0], "./comp.out");
-//    compArgv[1] = (char*) malloc( ( strlen("./code/expected_output.txt") + 1 ) * sizeof(char) );
-//    strcpy(compArgv[1], "./code/expected_output.txt");
-//    compArgv[2] = (char*) malloc( ( strlen("./program_output.txt") + 1 ) * sizeof(char) );
-//    strcpy(compArgv[2], "./program_output.txt");
 
-
-//	no need to realloc commandArgv[1] because he points to char[] on the Stack
     commandArgv[1] = (char*) malloc( (strlen(config[1]) + 1 ) * sizeof(char) );
     strcpy(commandArgv[1], config[1]);
     perror("Error 8");
-//	commandArgv[2] value is NULL from before
     for(i = 0; i < usersCount; i++) {
         fdUserOut = open("/home/matang99/Matala1/program_output.txt", (O_WRONLY | O_CREAT | O_TRUNC | O_SYNC), 0666);	// O_CREAT for creating at first iteration to creat file
         perror("error 8.4");
@@ -218,9 +194,6 @@ int main(int argc, char * argv[]) {
                 write(2, "main.exe(user) command failed\n", 30);
                 exit(-1);
             }
-            // open userOutput.txt again because SON CLOSED IT!!!!!!!! this time open on READ because no need to add
-            // need to open userOutput.txt at NEXT ITERATION for next COMMAND on O_WRONLY, so it will override the content
-            // for next user main.exe.
 //	    		fork:
             if ((pid = fork()) == -1) {
                 write(2, "second fork failed\n", 12);
@@ -233,9 +206,6 @@ int main(int argc, char * argv[]) {
                 close(1);
                 dup(fdResult);
                 char* compArgv[] = {"./comp.out", "./code/expected_output.txt", "./program_output.txt"};
-                // comp.c gets strings and open files alone.
-//				Change comp.c only returns a value, not printing something so no need to do dup.
-                // SON(comp.c) CLOSE AGAIN userOutput.txt
                 execvp(compArgv[0], compArgv);
 //				If execvp failed:
                 write(2, "exec(comp.out) failed\n", 22);
@@ -249,8 +219,6 @@ int main(int argc, char * argv[]) {
 
                 status = status/256;// status equal to 256 * x (exit(x) from other program ran by execvp;
                     printf("%s , %d\n", usersNames[i],status);
-//                int exit_status = WEXITSTATUS(status);
-//				User Succeeded(Give Him Grade 100):
                 if(status == 2) {
                     write(fdResult, usersNames[i], strlen(usersNames[i]));
                     write(fdResult, ", 100\n", 6);
